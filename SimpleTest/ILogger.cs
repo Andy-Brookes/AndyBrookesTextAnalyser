@@ -2,14 +2,12 @@
 
 //Test 
 
-namespace SimpleTest
+namespace Domain
 {
-    public static partial class MyTest
+    public interface ILogger
     {
-        private interface ILogger
-        {
-            void Log(string stuff);
-        }
-
+        void Log(string stuff);
+        void Error(string message, Exception? ex = null);
+        void Warning(string message);
     }
 }
